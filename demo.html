@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>film-飞机</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      background-color: #FFD200;
+      line-height: 1.428571429;
+    }
+
+    img {
+      vertical-align: middle;
+      border: 0;
+    }
+
+    .plane-wrapper {
+      position: absolute;
+      display: inline-block;
+      transition: all .5s;
+      -webkit-animation: undulate 8s linear infinite alternate;
+      perspective: 2500px;
+      margin-top: -125px;
+      width: 480px;
+      top: 50%;
+      left: 100.5px;
+      margin-left: 200px;
+    }
+
+    .rotate-container {
+      position: absolute;
+      top: 51.7003%;
+      left: 13.1%;
+      display: inline-block;
+      width: 27.424%;
+      margin-left:23px;
+      height: 14.4474%;
+      -webkit-transform-origin: 100% 50%;
+      /*transform-origin: center center;*/
+      animation: rotating .2s linear infinite reverse;
+    }
+
+    .propeller {
+      transform: rotateY(-28deg);
+    }
+
+    @-webkit-keyframes rotating {
+      0% {
+        -webkit-transform: rotate(0) rotateY(-20deg);
+        transform: rotate(0) rotateY(-20deg)
+      }
+      50% {
+        -webkit-transform: rotate(180deg) rotateY(-20deg);
+        transform: rotate(180deg) rotateY(-20deg)
+      }
+      100% {
+        -webkit-transform: rotate(360deg) rotateY(-20deg);
+        transform: rotate(360deg) rotateY(-20deg)
+      }
+    }
+
+    @keyframes rotating {
+      0% {
+        -webkit-transform: rotate(0) rotateY(-20deg);
+        transform: rotate(0) rotateY(-20deg)
+      }
+      50% {
+        -webkit-transform: rotate(180deg) rotateY(-20deg);
+        transform: rotate(180deg) rotateY(-20deg)
+      }
+      100% {
+        -webkit-transform: rotate(360deg) rotateY(-20deg);
+        transform: rotate(360deg) rotateY(-20deg)
+      }
+    }
+
+    @-webkit-keyframes undulate {
+      0%,
+      100%,
+      50% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+      }
+      25% {
+        -webkit-transform: translate3d(-6px, -18px, 0);
+        transform: translate3d(-6px, -18px, 0)
+      }
+      75% {
+        -webkit-transform: translate3d(6px, 10px, 0);
+        transform: translate3d(6px, 10px, 0)
+      }
+    }
+
+    @keyframes undulate {
+      0%,
+      100%,
+      50% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+      }
+      25% {
+        -webkit-transform: translate3d(-6px, -18px, 0);
+        transform: translate3d(-6px, -18px, 0)
+      }
+      75% {
+        -webkit-transform: translate3d(6px, 10px, 0);
+        transform: translate3d(6px, 10px, 0)
+      }
+    }
+
+    img {
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="plane-wrapper" style="left:35px;">
+    <img class="plane" src="http://fir.im/images/plane.svg">
+    <div class="rotate-container">
+      <img class="propeller" src="https://fir.im/images/propeller.svg">
+    </div>
+  </div>
+</body>
+
+</html>
